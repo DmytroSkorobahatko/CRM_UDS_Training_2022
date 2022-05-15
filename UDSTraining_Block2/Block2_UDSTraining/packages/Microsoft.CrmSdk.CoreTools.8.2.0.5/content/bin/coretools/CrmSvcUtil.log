@@ -1,0 +1,126 @@
+Microsoft.Xrm.Tooling.Connector.CrmServiceClient Error: 2 : Source	: System.ServiceModel
+Method	: Retrieve
+Date	: 15.04.2022
+Time	: 12:13:21
+Error	: Metadata contains a reference that cannot be resolved: 'https://disco.crm4.dynamics.com/XRMServices/2011/Discovery.svc?wsdl&sdkversion=0'.
+Stack Trace	: at System.ServiceModel.Description.MetadataExchangeClient.MetadataRetriever.Retrieve(TimeoutHelper timeoutHelper)
+   at System.ServiceModel.Description.MetadataExchangeClient.ResolveNext(ResolveCallState resolveCallState)
+   at System.ServiceModel.Description.MetadataExchangeClient.GetMetadata(MetadataRetriever retriever)
+   at Microsoft.Xrm.Sdk.Client.ServiceMetadataUtility.RetrieveServiceEndpointMetadata(Type contractType, Uri serviceUri, Boolean checkForSecondary)
+   at Microsoft.Xrm.Sdk.Client.ServiceConfiguration`1..ctor(Uri serviceUri, Boolean checkForSecondary)
+   at Microsoft.Xrm.Sdk.Client.ServiceConfigurationFactory.CreateManagement[TService](Uri serviceUri, Boolean enableProxyTypes, Assembly assembly)
+   at Microsoft.Xrm.Tooling.Connector.CrmWebSvc.CreateAndAuthenticateProxy[T](IServiceManagement`1 servicecfg, Uri ServiceUri, Uri homeRealm, ClientCredentials userCredentials, ClientCredentials deviceCredentials, String LogString)
+   at Microsoft.Xrm.Tooling.Connector.CrmWebSvc.DiscoverOrganizations(Uri discoveryServiceUri, Uri homeRealmUri, ClientCredentials clientCredentials, ClientCredentials deviceCredentials)
+   at Microsoft.Xrm.Tooling.Connector.CrmWebSvc.QueryLiveDiscoveryServer(Uri discoServer)
+   at Microsoft.Xrm.Tooling.Connector.CrmWebSvc.FindCrmOnlineDiscoveryServer(CrmOnlineDiscoveryServers onlineServerList, Boolean useO365Servers)
+   at Microsoft.Xrm.Tooling.Connector.CrmWebSvc.InitCRM2011Service()
+======================================================================================================================
+Inner Exception Level 1	: 
+Source	: System
+Method	: GetResponse
+Date	: 15.04.2022
+Time	: 12:13:21
+Error	: The underlying connection was closed: An unexpected error occurred on a send.
+Stack Trace	: at System.Net.HttpWebRequest.GetResponse()
+   at System.ServiceModel.Description.MetadataExchangeClient.MetadataLocationRetriever.DownloadMetadata(TimeoutHelper timeoutHelper)
+   at System.ServiceModel.Description.MetadataExchangeClient.MetadataRetriever.Retrieve(TimeoutHelper timeoutHelper)
+======================================================================================================================
+Inner Exception Level 2	: 
+Source	: System
+Method	: StartReadFrame
+Date	: 15.04.2022
+Time	: 12:13:21
+Error	: Authentication failed because the remote party has closed the transport stream.
+Stack Trace	: at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.CheckCompletionBeforeNextReceive(ProtocolToken message, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Net.TlsStream.ProcessAuthentication(LazyAsyncResult result)
+   at System.Net.TlsStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.PooledStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.ConnectStream.WriteHeaders(Boolean async)
+======================================================================================================================
+
+Microsoft.Xrm.Tooling.Connector.CrmServiceClient Error: 2 : Unable to Login to Dynamics CRM
+CrmSvcUtil Error: 2 : Exiting program with exit code 2 due to exception : System.Exception: Connection to CRM is not established. Aborting process.
+   at Microsoft.Crm.Services.Utility.SdkMetadataProviderService.LoadMetadata(IServiceProvider service)
+   at Microsoft.Crm.Services.Utility.CrmSvcUtil.Run()
+   at Microsoft.Crm.Services.Utility.CrmSvcUtil.Main(String[] args)
+CrmSvcUtil Error: 2 : ===== DETAIL ======
+CrmSvcUtil Error: 2 : Source	: CrmSvcUtil
+Method	: LoadMetadata
+Date	: 12:13:21
+Time	: 15.04.2022
+Error	: Connection to CRM is not established. Aborting process.
+Stack Trace	: at Microsoft.Crm.Services.Utility.SdkMetadataProviderService.LoadMetadata(IServiceProvider service)
+   at Microsoft.Crm.Services.Utility.CrmSvcUtil.Run()
+   at Microsoft.Crm.Services.Utility.CrmSvcUtil.Main(String[] args)
+======================================================================================================================
+
+Microsoft.Xrm.Tooling.Connector.CrmServiceClient Error: 2 : Source	: System.ServiceModel
+Method	: Retrieve
+Date	: 15.04.2022
+Time	: 12:14:10
+Error	: Metadata contains a reference that cannot be resolved: 'https://disco.crm4.dynamics.com/XRMServices/2011/Discovery.svc?wsdl&sdkversion=0'.
+Stack Trace	: at System.ServiceModel.Description.MetadataExchangeClient.MetadataRetriever.Retrieve(TimeoutHelper timeoutHelper)
+   at System.ServiceModel.Description.MetadataExchangeClient.ResolveNext(ResolveCallState resolveCallState)
+   at System.ServiceModel.Description.MetadataExchangeClient.GetMetadata(MetadataRetriever retriever)
+   at Microsoft.Xrm.Sdk.Client.ServiceMetadataUtility.RetrieveServiceEndpointMetadata(Type contractType, Uri serviceUri, Boolean checkForSecondary)
+   at Microsoft.Xrm.Sdk.Client.ServiceConfiguration`1..ctor(Uri serviceUri, Boolean checkForSecondary)
+   at Microsoft.Xrm.Sdk.Client.ServiceConfigurationFactory.CreateManagement[TService](Uri serviceUri, Boolean enableProxyTypes, Assembly assembly)
+   at Microsoft.Xrm.Tooling.Connector.CrmWebSvc.CreateAndAuthenticateProxy[T](IServiceManagement`1 servicecfg, Uri ServiceUri, Uri homeRealm, ClientCredentials userCredentials, ClientCredentials deviceCredentials, String LogString)
+   at Microsoft.Xrm.Tooling.Connector.CrmWebSvc.DiscoverOrganizations(Uri discoveryServiceUri, Uri homeRealmUri, ClientCredentials clientCredentials, ClientCredentials deviceCredentials)
+   at Microsoft.Xrm.Tooling.Connector.CrmWebSvc.QueryLiveDiscoveryServer(Uri discoServer)
+   at Microsoft.Xrm.Tooling.Connector.CrmWebSvc.FindCrmOnlineDiscoveryServer(CrmOnlineDiscoveryServers onlineServerList, Boolean useO365Servers)
+   at Microsoft.Xrm.Tooling.Connector.CrmWebSvc.InitCRM2011Service()
+======================================================================================================================
+Inner Exception Level 1	: 
+Source	: System
+Method	: GetResponse
+Date	: 15.04.2022
+Time	: 12:14:10
+Error	: The underlying connection was closed: An unexpected error occurred on a send.
+Stack Trace	: at System.Net.HttpWebRequest.GetResponse()
+   at System.ServiceModel.Description.MetadataExchangeClient.MetadataLocationRetriever.DownloadMetadata(TimeoutHelper timeoutHelper)
+   at System.ServiceModel.Description.MetadataExchangeClient.MetadataRetriever.Retrieve(TimeoutHelper timeoutHelper)
+======================================================================================================================
+Inner Exception Level 2	: 
+Source	: System
+Method	: StartReadFrame
+Date	: 15.04.2022
+Time	: 12:14:10
+Error	: Authentication failed because the remote party has closed the transport stream.
+Stack Trace	: at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.CheckCompletionBeforeNextReceive(ProtocolToken message, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Net.TlsStream.ProcessAuthentication(LazyAsyncResult result)
+   at System.Net.TlsStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.PooledStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.ConnectStream.WriteHeaders(Boolean async)
+======================================================================================================================
+
+Microsoft.Xrm.Tooling.Connector.CrmServiceClient Error: 2 : Unable to Login to Dynamics CRM
+CrmSvcUtil Error: 2 : Exiting program with exit code 2 due to exception : System.Exception: Connection to CRM is not established. Aborting process.
+   at Microsoft.Crm.Services.Utility.SdkMetadataProviderService.LoadMetadata(IServiceProvider service)
+   at Microsoft.Crm.Services.Utility.CrmSvcUtil.Run()
+   at Microsoft.Crm.Services.Utility.CrmSvcUtil.Main(String[] args)
+CrmSvcUtil Error: 2 : ===== DETAIL ======
+CrmSvcUtil Error: 2 : Source	: CrmSvcUtil
+Method	: LoadMetadata
+Date	: 12:14:10
+Time	: 15.04.2022
+Error	: Connection to CRM is not established. Aborting process.
+Stack Trace	: at Microsoft.Crm.Services.Utility.SdkMetadataProviderService.LoadMetadata(IServiceProvider service)
+   at Microsoft.Crm.Services.Utility.CrmSvcUtil.Run()
+   at Microsoft.Crm.Services.Utility.CrmSvcUtil.Main(String[] args)
+======================================================================================================================
+

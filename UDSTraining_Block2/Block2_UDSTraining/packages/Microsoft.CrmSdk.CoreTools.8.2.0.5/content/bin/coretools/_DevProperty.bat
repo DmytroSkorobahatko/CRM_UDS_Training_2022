@@ -1,0 +1,1 @@
+CrmSvcUtil.exe /url:https://carrentingcompany.crm4.dynamics.com/XRMServices/2011/Organization.svc  /out:CrmContext.cs /username:DmytroSkorobahatko@d365dmytros.onmicrosoft.com /password:Dm.180623.Sk /serviceContextName:CrmServiceContext
